@@ -2,13 +2,20 @@
 #include <assert.h>
 
 int alertFailureCount = 0;
-
+int thresholdValue = 200;
 int networkAlertStub(float celcius) {
     std::cout << "ALERT: Temperature is " << celcius << " celcius.\n";
     // Return 200 for ok
     // Return 500 for not-ok
     // stub always succeeds and returns 200
-    return celcius;
+    if(celcius<=thresholdValue)
+    {
+        return 200;
+    }
+    else
+    {
+        return 500;
+    }
 }
 
 void alertInCelcius(float farenheit) {
