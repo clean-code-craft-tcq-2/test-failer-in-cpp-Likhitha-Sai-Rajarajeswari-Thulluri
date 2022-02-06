@@ -15,7 +15,7 @@ char size(int cms) {
 
 void testSize(int cms, char ch)
 {
-    asset(size(cms) == ch);
+    assert(size(cms) == ch);
 }
 
 int main() {
