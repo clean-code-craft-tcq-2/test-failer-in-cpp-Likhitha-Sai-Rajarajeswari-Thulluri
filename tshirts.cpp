@@ -13,12 +13,17 @@ char size(int cms) {
     return sizeName;
 }
 
+void testSize(int cms, char ch)
+{
+    asset(size(cms) == ch);
+}
+
 int main() {
-    assert(size(37) == 'S');
-    assert(size(38) == 'M');
-    assert(size(40) == 'M');
-    assert(size(42) == 'M');
-    assert(size(43) == 'L');
+    testSize(size(37), 'S');
+    testSize(size(38), 'M');
+    testSize(size(40), 'M');
+    testSize(size(42), 'M');
+    testSize(size(43), 'L');
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
