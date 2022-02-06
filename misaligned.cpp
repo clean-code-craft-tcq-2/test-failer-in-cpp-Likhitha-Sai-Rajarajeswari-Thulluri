@@ -5,9 +5,9 @@
 const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
-string formatString(int i, int j)
+std::string formatString(int i, int j)
 {
-    string st = (i*5+j).to_string()+ " | "+ majorColor[i] + " | " + minorColor[j];
+    std::string st = (i*5+j).to_string()+ " | "+ majorColor[i] + " | " + minorColor[j];
     return st;
 }
 
