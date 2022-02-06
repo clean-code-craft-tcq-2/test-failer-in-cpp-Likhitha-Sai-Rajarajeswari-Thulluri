@@ -24,13 +24,13 @@ int printColorMap() {
 
 void testPrintColorMap()
 {
-    assert(formatString(0,0).compare("0 ! White | Blue"));
-    assert(formatString(2,3).compare("13 ! Black ! Brown"));
+    int result = printColorMap();
+    assert(result == 25);
+    assert((formatString(0,0).compare("0 | White | Blue")) == 0);
+    assert((formatString(2,3).compare("13 | Black | Brown")) == 0);
 }
 
 int main() {
-    int result = printColorMap();
-    assert(result == 25);
     testPrintColorMap();
     std::cout << "All is well (maybe!)\n";
     return 0;
