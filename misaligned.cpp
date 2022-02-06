@@ -5,10 +5,10 @@
 const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
-void formatString(int i, int j)
+string formatString(int i, int j)
 {
     string st = (i*5+j).to_string()+ " | "+ majorColor[i] + " | " + minorColor[j];
-    
+    return st;
 }
 
 int printColorMap() {
@@ -24,8 +24,8 @@ int printColorMap() {
 
 void testPrintColorMap()
 {
-    assert(formatString(0,0) == "0 ! White | Blue");
-    assert(formatString(2,3) == "13 ! Black ! Brown);
+    assert(formatString(0,0).compare("0 ! White | Blue"));
+    assert(formatString(2,3).compare("13 ! Black ! Brown"));
 }
 
 int main() {
