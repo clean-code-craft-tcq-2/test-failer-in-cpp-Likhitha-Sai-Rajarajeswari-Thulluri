@@ -7,7 +7,7 @@ const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
 std::string formatString(int i, int j)
 {
-    std::string st = (i*5+j).to_string()+ " | "+ majorColor[i] + " | " + minorColor[j];
+    std::string st = std::to_string(i*5+j)+ " | "+ majorColor[i] + " | " + minorColor[j];
     return st;
 }
 
