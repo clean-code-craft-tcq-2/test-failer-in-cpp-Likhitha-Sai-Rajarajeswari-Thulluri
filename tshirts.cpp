@@ -19,11 +19,11 @@ void testSize(int cms, char ch)
 }
 
 int main() {
-    testSize(size(37), 'S');
-    testSize(size(38), 'M');
-    testSize(size(40), 'M');
-    testSize(size(42), 'M');
-    testSize(size(43), 'L');
+    testSize(37, 'S');
+    testSize(38, 'M');
+    testSize(40, 'M');
+    testSize(42, 'M');
+    testSize(43, 'L');
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
